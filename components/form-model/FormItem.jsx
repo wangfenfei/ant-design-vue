@@ -201,11 +201,11 @@ export default {
       }
       let prop = getPropByPath(model, path, true);
       this.validateDisabled = true;
-      if (Array.isArray(value)) {
-        prop.o[prop.k] = [].concat(this.initialValue);
-      } else {
+//       if (Array.isArray(value)) {
+//         prop.o[prop.k] = [].concat(this.initialValue);
+//       } else {
         prop.o[prop.k] = this.initialValue;
-      }
+//       }
       // reset validateDisabled after onFieldChange triggered
       this.$nextTick(() => {
         this.validateDisabled = false;
